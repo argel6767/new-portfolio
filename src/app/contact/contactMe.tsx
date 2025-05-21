@@ -75,7 +75,7 @@ export const ContactMe = () => {
                 <label className={"text-lg"}>Name</label>
                 <input
                     disabled={isLoading}
-                    className={"input bg-white border-2 border-slate-200 rounded-lg disabled:bg-white disabled:border-2 disabled:border-slate-200 text-sm"}
+                    className={"input bg-white border-2 border-slate-300 rounded-lg disabled:bg-white disabled:border-2 disabled:border-slate-200 disabled:text-black text-sm"}
                     type="text"
                     name="name"
                     value={formData.name}
@@ -84,7 +84,7 @@ export const ContactMe = () => {
                 <label className={"text-lg"}>Email</label>
                 <input
                     disabled={isLoading}
-                    className={"input bg-white border-2 border-slate-200 rounded-lg disabled:bg-white disabled:border-2 disabled:border-slate-200 text-sm"}
+                    className={"input bg-white border-2 border-slate-300 rounded-lg disabled:bg-white disabled:border-2 disabled:border-slate-200 disabled:text-black text-sm"}
                     type="text"
                     name="return_email"
                     value={formData.return_email}
@@ -93,7 +93,7 @@ export const ContactMe = () => {
                 <label className={"text-lg"}>Message</label>
                 <textarea
                     disabled={isLoading}
-                    className={"textarea w-full lg:w-3/5 bg-white border-2 border-slate-200 rounded-lg disabled:bg-white disabled:border-2 disabled:border-slate-200 text-sm"}
+                    className={"textarea w-full lg:w-3/5 bg-white border-2 border-slate-300 rounded-lg disabled:bg-white disabled:border-2 disabled:border-slate-200 disabled:text-black text-sm"}
                     name="message"
                     value={formData.message}
                     onChange={handleInputChange}
@@ -101,7 +101,7 @@ export const ContactMe = () => {
                 <div className={"flex flex-col justify-end items-end w-full py-3 gap-4"}>
                     <button
                         disabled={isLoading || !isFormValid}
-                        className={`btn btn-primary flex w-3/4 md:w-1/3 disabled:bg-primary disabled:border-2 disabled:border-slate-200 disabled:text-black  ${isSuccess ? "motion-bg-in-success motion-delay-200" : ""}`}
+                        className={`btn btn-primary flex w-3/4 md:w-1/3 disabled:bg-primary disabled:border-2 disabled:border-slate-300 disabled:text-black  ${isSuccess ? "motion-bg-in-success motion-delay-200" : ""}`}
                         type="submit"
                         value="Send"
                     >
