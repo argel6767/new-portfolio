@@ -23,14 +23,17 @@ export default function Home() {
                       <Image className={"rounded-4xl shadow-2xl rotate-2 hidden md:block"} src={homepage}
                              alt={"Argel Hernandez Amaya wearing sombraro, smiling"} width={400}/>
                   </div>
+
+              </header>
+              <div className={"motion-translate-y-in-100 motion-ease-spring-smooth motion-delay-300"}>
                   <section className={"flex flex-col justify-start w-full gap-10 py-6"}>
                       <h2 className={"text-4xl font-semibold"}>Some of My Projects</h2>
                       <ProjectPreviewContainer/>
                   </section>
-              </header>
-              <footer>
-                  <Footer/>
-              </footer>
+                  <footer>
+                      <Footer/>
+                  </footer>
+              </div>
           </main>
       </div>
   )

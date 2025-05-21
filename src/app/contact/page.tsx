@@ -18,11 +18,14 @@ export default function Contact() {
                         </article>
                     </div>
                 </header>
-                <Socials/>
-                <ContactMe/>
-                <footer className={"py-4"}>
-                    <Footer/>
-                </footer>
-                </main>
+                <div className={"motion-translate-y-in-100 motion-ease-spring-smooth motion-delay-300"}>
+                    <Socials/>
+                    <ContactMe/>
+                    <footer className={"py-4"}>
+                        <Footer/>
+                    </footer>
+                </div>
+
+            </main>
         </div>)
 }

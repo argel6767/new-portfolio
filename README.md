@@ -17,7 +17,7 @@ This portfolio is heavily inspired by [reactfolio](https://github.com/truethari/
 
 ## 🛠️ Technologies
 
-- **Frontend**: Next.js, TypeScript, Tailwind CSS
+- **Frontend**: Next.js, TypeScript, Tailwind CSS 4
 - **UI Libraries**: DaisyUI, FontAwesome
 - **Animations**: tailwindcss-motion
 - **Form Handling**: EmailJS
@@ -92,11 +92,11 @@ Edit the `src/data/user.ts` file to update your personal information, including:
 
 ### Styling
 
-This project uses Tailwind CSS for styling. Customize the look and feel by editing:
+This project uses Tailwind CSS 4 for styling. Customize the look and feel by editing:
 
-- `src/app/globals.css` - Global styles
+- `src/app/globals.css` - Global styles and Tailwind directives
 - Tailwind classes within component files
-- DaisyUI theme in the tailwind.config.js file (not included in the repo structure but can be added)
+- Plugin configurations via the `@plugin` directives in globals.css
 
 ## 📝 License
 

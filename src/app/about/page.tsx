@@ -24,8 +24,10 @@ export default function About() {
                                alt={"Argel Hernandez Amaya wearing sombraro, smiling"} width={250} height={400}/>
                     </div>
                 </header>
-                <span className={"flex flex-col items-center w-full gap-6 py-6 px-4"}>
-                    <article className={"flex flex-col w-4/5 gap-6 shadow-xl rounded-3xl bg-white hover:scale-105 transition-transform duration-300 p-6"}>
+                <div className={"motion-translate-y-in-100 motion-ease-spring-smooth motion-delay-300"}>
+                  <span className={"flex flex-col items-center w-full gap-6 py-6 px-4"}>
+                    <article
+                        className={"flex flex-col w-4/5 gap-6 shadow-xl rounded-3xl bg-white hover:scale-105 transition-transform duration-300 p-6"}>
                         <h2 className={"text-2xl flex items-center gap-3 font-bold"}>
                             My Education <FontAwesomeIcon className={"w-7"} icon={faUniversity}/>
                         </h2>
@@ -39,9 +41,11 @@ export default function About() {
                         <JobInfoContainer/>
                     </article>
                 </span>
-                <footer>
-                    <Footer/>
-                </footer>
+                    <footer>
+                        <Footer/>
+                    </footer>
+                </div>
+
             </main>
         </div>
     )

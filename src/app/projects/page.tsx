@@ -15,13 +15,16 @@ export default function Projects() {
                     <h1 className={"font-bold text-5xl"}>{INFO.project.title}</h1>
                     <p className={"text-xl text-gray-400 font-semibold text-left"}>{INFO.project.description}</p>
                 </article>
-                <span className={"w-full pt-44 px-2 lg:w-3/4 rounded-3xl shadow-2xl"}>
+                <div className={"motion-translate-y-in-100 motion-ease-spring-smooth motion-delay-300"}>
+                    <span className={"w-full pt-44 px-2 lg:w-3/4 rounded-3xl shadow-2xl"}>
             <ProjectDropDownContainer/>
             </span>
-                <LanguageStats/>
-                <footer>
-                    <Footer/>
-                </footer>
+                    <LanguageStats/>
+                    <footer>
+                        <Footer/>
+                    </footer>
+                </div>
+
             </main>
         </div>)
 }

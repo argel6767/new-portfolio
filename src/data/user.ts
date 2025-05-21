@@ -4,6 +4,7 @@ const INFO = {
         name: "Argel Hernandez Amaya",
         email: "argel6767@gmail.com",
         logo: "../logos.png",
+        gitHubUsername: "argel6767",
     },
 
     socials: {
