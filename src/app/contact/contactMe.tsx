@@ -20,14 +20,41 @@ export const ContactMe = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [isError, setIsError] = useState(false);
     const [errorMessage, setErrorMessage] = useState("");
+    const [isSuccess, setIsSuccess] = useState(false);
 
-    const sendEmail = async (e:React.FormEvent<HTMLFormElement>) => {
+    // Add state for form values
+    const [formData, setFormData] = useState({
+        name: "",
+        return_email: "",
+        message: ""
+    });
+
+    // Check if all fields are filled
+    const isFormValid = formData.name.trim() !== "" &&
+        formData.return_email.trim() !== "" &&
+        formData.message.trim() !== "";
+
+    // Handle input changes
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({
+            ...prev,
+            [name]: value
+        }));
+    };
+
+    const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
         setIsLoading(true);
         e.preventDefault();
-        
+
         try {
             await emailjs.sendForm(SERVICE_ID!, TEMPLATE_ID!, form.current!, {publicKey: PUBLIC_KEY!,})
             console.log('Email sent successfully!')
+            setIsSuccess(true);
+            await sleep(2000);
+            setIsSuccess(false);
+            // Reset form after successful submission
+            setFormData({ name: "", return_email: "", message: "" });
         }
         catch (error) {
             setIsError(true);
@@ -46,20 +73,38 @@ export const ContactMe = () => {
             <h2 className={"text-3xl font-semibold py-6"}>Or Better Yet, Email Me Here!</h2>
             <form className={"grid grid-cols-2 gap-4 w-full"} ref={form} onSubmit={sendEmail}>
                 <label className={"text-lg"}>Name</label>
-                <input disabled={isLoading}
-                       className={"input bg-white border-2 border-slate-200 rounded-lg disabled:bg-white disabled:border-2 disabled:border-slate-200 text-sm"}
-                       type="text" name="name"/>
+                <input
+                    disabled={isLoading}
+                    className={"input bg-white border-2 border-slate-200 rounded-lg disabled:bg-white disabled:border-2 disabled:border-slate-200 text-sm"}
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                />
                 <label className={"text-lg"}>Email</label>
-                <input disabled={isLoading}
-                       className={"input bg-white border-2 border-slate-200 rounded-lg disabled:bg-white disabled:border-2 disabled:border-slate-200 text-sm"}
-                       type="text" name="return_email"/>
+                <input
+                    disabled={isLoading}
+                    className={"input bg-white border-2 border-slate-200 rounded-lg disabled:bg-white disabled:border-2 disabled:border-slate-200 text-sm"}
+                    type="text"
+                    name="return_email"
+                    value={formData.return_email}
+                    onChange={handleInputChange}
+                />
                 <label className={"text-lg"}>Message</label>
-                <textarea disabled={isLoading}
-                          className={"textarea w-full lg:w-3/5 bg-white border-2 border-slate-200 rounded-lg disabled:bg-white disabled:border-2 disabled:border-slate-200 text-sm"}
-                          name="message"/>
+                <textarea
+                    disabled={isLoading}
+                    className={"textarea w-full lg:w-3/5 bg-white border-2 border-slate-200 rounded-lg disabled:bg-white disabled:border-2 disabled:border-slate-200 text-sm"}
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                />
                 <div className={"flex flex-col justify-end items-end w-full py-3 gap-4"}>
-                    <button disabled={isLoading} className={"btn btn-primary flex w-3/4 md:w-1/3 disabled:bg-primary"}
-                            type="submit" value="Send">
+                    <button
+                        disabled={isLoading || !isFormValid}
+                        className={`btn btn-primary flex w-3/4 md:w-1/3 disabled:bg-primary disabled:border-2 disabled:border-slate-200 disabled:text-black  ${isSuccess ? "motion-bg-in-success motion-delay-200" : ""}`}
+                        type="submit"
+                        value="Send"
+                    >
                         {isLoading ?
                             <span className="loading loading-spinner loading-md bg-primary"></span> :
                             <p>Send</p>}
@@ -71,7 +116,7 @@ export const ContactMe = () => {
             <p className={"text-gray-400 text-xs md:text-sm py-2"}>I will get back to you as soon as I can &#128522;.</p>
         </main>
     );
-}
+};
 
 export const Socials = () => {
     return (
