@@ -11,9 +11,9 @@ export default function Projects() {
                 <nav className={"flex justify-center items-center w-full"}>
                     <NavBar/>
                 </nav>
-                <article className={"flex flex-col items-center w-full gap-4 py-4"}>
+                <article className={"flex flex-col items-center w-full gap-6 py-4 px-2"}>
                     <h1 className={"font-bold text-5xl"}>{INFO.project.title}</h1>
-                    <p className={"text-xl text-gray-400 font-semibold text-center"}>{INFO.project.description}</p>
+                    <p className={"text-xl text-gray-400 font-semibold text-left"}>{INFO.project.description}</p>
                 </article>
                 <span className={"w-full pt-44 px-2 lg:w-3/4 rounded-3xl shadow-2xl"}>
             <ProjectDropDownContainer/>

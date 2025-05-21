@@ -28,7 +28,7 @@ const Project = ({project, displayText, children}: ProjectProps) => {
 
     return (
         <>
-            <header className={"flex justify-start items-center gap-1"}>
+            <header className={"flex justify-start items-center gap-2"}>
                 {project.logos.map((logo, i) => (
                     <img key={i} src={logo} alt={"Tool image"} width={50}/>
                 ))}
@@ -103,6 +103,7 @@ export const ProjectDropDown = ({project}:ProjectDropDownContainerProps) => {
         const checkHash = () => {
             if (window.location.hash === `#${anchor}`) {
                 setIsOpen(true);
+                window.location.hash = "";
             }
         };
 
@@ -135,21 +136,32 @@ export const ProjectDropDown = ({project}:ProjectDropDownContainerProps) => {
         <main className="relative w-full mt-8 px-4">
             <div className={"flex justify-center items-center w-full"}>
                 <button id="dropdown" onClick={toggleDropdown}
-                        className=" w-full flex items-center justify-center px-6 py-2 bg-slate-200 rounded-md hover:bg-slate-50 hover:scale-105 hover:cursor-pointer transition-transform duration-300 transition-colors duration-300  gap-2 shadow-lg rounded-2xl">
-                    <span className={"text-2xl md:text-3xl font-semibold"}>{project.title}</span>
-                    <svg className={`w-5 h-5 transition-transform duration-300 ${isOpen ? "transform rotate-180" : ""}`}
-                         fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/>
-                    </svg>
+                        className=" w-full flex items-center justify-center px-6 py-2  rounded-md hover:bg-slate-50 hover:scale-105 hover:cursor-pointer transition-transform duration-300 transition-colors duration-300  gap-2 shadow-xl rounded-2xl">
+                    <div className={"flex flex-col items-center w-full gap-3"}>
+                        <header className={"flex justify-start items-center gap-2"}>
+                            {project.logos.map((logo, i) => (
+                                <img key={i} src={logo} alt={"Tool image"} width={50}/>
+                            ))}
+                        </header>
+                        <span className={"text-2xl md:text-3xl font-semibold"}>{project.title}</span>
+                        <svg
+                            className={`w-5 h-5 transition-transform duration-300 ${isOpen ? "transform rotate-180" : ""}`}
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </div>
                 </button>
             </div>
 
             <div ref={dropdownRef}
                  className={`absolute  left-1/2 transform -translate-x-1/2 w-full mt-2 rounded-md shadow-lg bg-slate-100 transition-all duration-300 origin-top z-10 p-4 ${isOpen ? "opacity-100 transform scale-y-100 max-h-96" : "opacity-0 transform scale-y-0 max-h-0"} overflow-y-scroll`}>
                 <article className="py-2">
-                    <Project displayText={displayText} project={project}>
-                        <Microlink url={link} lazy size={'large'} media={"iframe"}/>
-                    </Project>
+                    <main className={"flex flex-col gap-2 py-2"}>
+                        <p className={"text-gray-400 font-semibold"}>{displayText}</p>
+                        <article className={"flex justify-center items-center pt-4"}>
+                            <Microlink url={link} lazy size={'large'} media={"iframe"}/>
+                        </article>
+                    </main>
                 </article>
             </div>
         </main>

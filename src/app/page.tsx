@@ -16,9 +16,9 @@ export default function Home() {
                   <div className={"md:flex justify-center items-center w-full px-3 gap-4"}>
                       <Image className={"rounded-4xl shadow-2xl rotate-2 block md:hidden"} src={homepage}
                              alt={"Argel Hernandez Amaya wearing sombraro, smiling"} width={400}/>
-                      <article className={"flex flex-col items-center w-full gap-4 py-4"}>
+                      <article className={"flex flex-col items-center w-full gap-6 py-4 px-2"}>
                           <h1 className={"font-bold text-5xl"}>{INFO.homepage.title}</h1>
-                          <p className={"text-xl text-gray-400 font-semibold text-center"}>{INFO.homepage.description}</p>
+                          <p className={"text-xl text-gray-400 font-semibold text-left"}>{INFO.homepage.description}</p>
                       </article>
                       <Image className={"rounded-4xl shadow-2xl rotate-2 hidden md:block"} src={homepage}
                              alt={"Argel Hernandez Amaya wearing sombraro, smiling"} width={400}/>
