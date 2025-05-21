@@ -31,6 +31,11 @@ const INFO = {
             "any improvements or enhancements you might have in mind. Collaborating with others is a great way to learn and grow, and I'm always open to new ideas and feedback."
     },
 
+    contact: {
+        title:"Connect With Me!",
+        description: "Thank you for your interest in getting in touch with me. I welcome your feedback, questions, and suggestions. If you have a specific question or comment, please feel free to email me directly to my email address, or message me on my LinkedIn."
+    },
+
 
     projects: [
         {

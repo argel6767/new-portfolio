@@ -9,7 +9,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 export default function About() {
     return (
-        <div className={"flex justify-center items-center w-full"}>
+        <div className={"flex justify-center items-center w-full motion-preset-fade transition-opacity  motion-delay-200"}>
             <main className={"pt-32 px-3 w-full lg:w-3/4 rounded-3xl shadow-2xl"}>
                 <nav className={"flex justify-center items-center w-full "}>
                     <NavBar/>

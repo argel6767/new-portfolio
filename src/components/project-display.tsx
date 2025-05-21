@@ -59,7 +59,7 @@ const ProjectPreview = ({project}: ProjectPreviewProps) => {
             onMouseEnter={() => setHovering(true)}
             onMouseLeave={() => setHovering(false)}>
             {isHovering && <Modal>
-                <Link className={"btn btn-outline animate-pulse"} href={`/projects/#${project.title.replaceAll(" ", "")}`}>Read More</Link>
+                <Link className={"btn btn-outline"} href={`/projects/#${project.title.replaceAll(" ", "")}`}>Read More</Link>
             </Modal>}
             <Project project={project} displayText={displayText} />
         </div>
@@ -103,7 +103,22 @@ export const ProjectDropDown = ({project}:ProjectDropDownContainerProps) => {
         const checkHash = () => {
             if (window.location.hash === `#${anchor}`) {
                 setIsOpen(true);
-                window.location.hash = "";
+
+                // Use history.replaceState instead of window.location.hash = ""
+                // This prevents page jumps when clearing the hash
+                history.replaceState(null, document.title, window.location.pathname + window.location.search);
+
+                // Scroll to the dropdown after a small delay to ensure it's rendered
+                setTimeout(() => {
+                    if (dropdownRef.current) {
+                        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                        // @ts-expect-error
+                        dropdownRef.current.scrollIntoView({ behavior: 'smooth' });
+                        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                        // @ts-expect-error
+                        dropdownRef.current.focus();
+                    }
+                }, 250); // Slightly longer timeout to ensure animations have started
             }
         };
 
@@ -136,7 +151,7 @@ export const ProjectDropDown = ({project}:ProjectDropDownContainerProps) => {
         <main className="relative w-full mt-8 px-4">
             <div className={"flex justify-center items-center w-full"}>
                 <button id="dropdown" onClick={toggleDropdown}
-                        className=" w-full flex items-center justify-center px-6 py-2  rounded-md hover:bg-slate-50 hover:scale-105 hover:cursor-pointer transition-transform duration-300 transition-colors duration-300  gap-2 shadow-xl rounded-2xl">
+                        className=" w-full flex items-center justify-center px-6 py-4  rounded-md hover:bg-slate-50 hover:scale-105 hover:cursor-pointer transition-transform duration-300 transition-colors duration-300  gap-2 shadow-xl rounded-2xl">
                     <div className={"flex flex-col items-center w-full gap-3"}>
                         <header className={"flex justify-start items-center gap-2"}>
                             {project.logos.map((logo, i) => (
@@ -145,7 +160,7 @@ export const ProjectDropDown = ({project}:ProjectDropDownContainerProps) => {
                         </header>
                         <span className={"text-2xl md:text-3xl font-semibold"}>{project.title}</span>
                         <svg
-                            className={`w-5 h-5 transition-transform duration-300 ${isOpen ? "transform rotate-180" : ""}`}
+                            className={`w-5 h-5 transition-transform duration-300 motion-preset-fade transition-opacity motion-translate-y-out-50  motion-delay-250 ${isOpen ? "transform rotate-180" : ""}`}
                             fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/>
                         </svg>
@@ -154,7 +169,8 @@ export const ProjectDropDown = ({project}:ProjectDropDownContainerProps) => {
             </div>
 
             <div ref={dropdownRef}
-                 className={`absolute  left-1/2 transform -translate-x-1/2 w-full mt-2 rounded-md shadow-lg bg-slate-100 transition-all duration-300 origin-top z-10 p-4 ${isOpen ? "opacity-100 transform scale-y-100 max-h-96" : "opacity-0 transform scale-y-0 max-h-0"} overflow-y-scroll`}>
+                 tabIndex={-1}
+                 className={`absolute  left-1/2 transform -translate-x-1/2 w-full mt-2 rounded-md shadow-lg bg-slate-100 transition-all duration-500 ease-in-out origin-top z-10 p-4 ${isOpen ? "opacity-100 transform scale-y-100 max-h-96" : "opacity-0 transform scale-y-0 max-h-0"} overflow-y-scroll`}>
                 <article className="py-2">
                     <main className={"flex flex-col gap-2 py-2"}>
                         <p className={"text-gray-400 font-semibold"}>{displayText}</p>

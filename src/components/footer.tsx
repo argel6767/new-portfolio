@@ -16,15 +16,15 @@ export const Footer = () => {
                 <div className="grid grid-flow-col gap-4">
                         <ul className={"flex justify-start w-full gap-3 items-center pt-2"}>
                             <li className={"hover:scale-110 hover:cursor-pointer transition-transform duration-300"}>
-                                <Link href={"https://github.com/argel6767"}><FontAwesomeIcon className={"w-9"}
+                                <Link className={"text-3xl"} href={"https://github.com/argel6767"}><FontAwesomeIcon className={"w-12"}
                                                                                              icon={faGithub}/></Link>
                             </li>
                             <li className={"hover:scale-110 hover:cursor-pointer transition-transform duration-300"}>
-                                <Link href={"https://www.linkedin.com/in/argel-hernandez-amaya/"}><FontAwesomeIcon
-                                    className={"w-9"} icon={faLinkedin}/></Link>
+                                <Link className={"text-3xl"} href={"https://www.linkedin.com/in/argel-hernandez-amaya/"}><FontAwesomeIcon
+                                    className={"w-12"} icon={faLinkedin}/></Link>
                             </li>
                             <li className={"hover:scale-110 hover:cursor-pointer transition-transform duration-300"}>
-                                <Link href={"mailto:argel6767@gmail.com"}><FontAwesomeIcon className={"w-13"}
+                                <Link className={"text-3xl"} href={"mailto:argel6767@gmail.com"}><FontAwesomeIcon className={"w-16"}
                                                                                            icon={faMailBulk}/></Link>
                             </li>
                         </ul>

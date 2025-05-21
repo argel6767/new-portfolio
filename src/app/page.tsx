@@ -7,7 +7,7 @@ import {Footer} from "@/components/footer";
 
 export default function Home() {
   return (
-      <div className={"flex justify-center items-center w-full"}>
+      <div className={"flex justify-center items-center w-full motion-preset-fade transition-opacity motion-delay-400"}>
           <main className={"pt-32 px-3 w-full lg:w-3/4 rounded-3xl shadow-2xl"}>
               <nav className={"flex justify-center items-center w-full "}>
                   <NavBar/>

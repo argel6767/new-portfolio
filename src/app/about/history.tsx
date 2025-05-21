@@ -12,7 +12,7 @@ interface SchoolInfoProps {
 
 const SchoolInfo = ({education}: SchoolInfoProps) => {
     return (
-        <span className={"flex flex-col justify-start text-gray-400 gap-2 font-bold"}>
+        <span className={"flex flex-col justify-start text-gray-500 gap-2 font-bold"}>
             <h3 className={"text-md"}>{education.school}</h3>
             <div className={"flex text-xs font-semibold  justify-start gap-10"}>
                 <p>{education.major}</p>
@@ -44,7 +44,7 @@ interface WorkInfoProps {
 
 const JobInfo = ({job}: WorkInfoProps) => {
     return (
-        <span className={"flex flex-col justify-start text-gray-400 gap-2"}>
+        <span className={"flex flex-col justify-start text-gray-500 gap-2"}>
             <h3 className={"text-md font-bold"}>{job.position}</h3>
             <div className={"flex text-xs font-semibold  justify-start gap-10"}>
                 <p>{job.employer}</p>
