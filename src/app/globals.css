@@ -1,3 +1,24 @@
 @import "tailwindcss";
 @plugin "daisyui";
 @plugin "tailwindcss-motion";
+
+@layer utilities {
+    .scrollbar::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+        border-radius: 9999px;
+    }
+
+    .scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .scrollbar::-webkit-scrollbar-thumb {
+        background: transparent;
+        border-radius: 9999px;
+    }
+
+    .group:hover .scrollbar::-webkit-scrollbar-thumb {
+        background: #c1c2c5;
+    }
+}

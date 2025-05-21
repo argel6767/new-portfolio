@@ -24,6 +24,13 @@ const INFO = {
             " I love to workout and spend time with my friends when I am not programming."
     },
 
+    project: {
+        title:"Here are some of my personal projects!",
+        description:
+            "I've worked on a variety of projects throughout my time in college to improve as a developer and because of my passion for development. If you're interested in any of the projects I've worked on, please feel free to check out their GitHub repositories and suggest " +
+            "any improvements or enhancements you might have in mind. Collaborating with others is a great way to learn and grow, and I'm always open to new ideas and feedback."
+    },
+
 
     projects: [
         {
@@ -36,7 +43,8 @@ const INFO = {
                 "https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg",
                 "https://www.vectorlogo.zone/logos/heroku/heroku-icon.svg"],
             linkText: "View Project",
-            link: "https://github.com/argel6767/tailor.ai",
+            gitHubLink: "https://github.com/argel6767/tailor.ai",
+            webLink:"https://tailor-ai.netlify.app/"
         },
 
         {
@@ -50,7 +58,8 @@ const INFO = {
                 "https://www.vectorlogo.zone/logos/docker/docker-tile.svg"
             ],
             linkText: "View Project",
-            link: "https://gitlab.com/LibreFoodPantry/client-solutions/bear-necessities-market",
+            gitHubLink: "https://gitlab.com/LibreFoodPantry/client-solutions/bear-necessities-market",
+            webLink: null
         },
 
         {
@@ -65,7 +74,8 @@ const INFO = {
                 "https://www.vectorlogo.zone/logos/azurecontainerregistry/azurecontainerregistry-icon.svg"
             ],
             linkText: "View Project",
-            link:"https://github.com/argel6767/i-need-housing"
+            gitHubLink:"https://github.com/argel6767/i-need-housing",
+            webLink: "https://i-need-housing.vercel.app/"
         },
 
         {
@@ -74,7 +84,8 @@ const INFO = {
                 "Customer Order Parser is a desktop application built for Blue Tactical. COP leverages custom designed data pipelines and Apache POI to clean and format raw product data into readable and formatted Excel Sheets. COP also leverages JavaFX for a user-friendly UI.",
             logos: ["https://cdn.jsdelivr.net/npm/programming-languages-logos/src/java/java.png"],
             linkText: "View Project",
-            link: "https://github.com/argel6767/customer-order-parser",
+            gitHubLink: "https://github.com/argel6767/customer-order-parser",
+            webLink: null
         },
 
         {
@@ -88,7 +99,8 @@ const INFO = {
                 "https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg"
             ],
             linkText: "View Project",
-            link: "https://github.com/argel6767/PeakPerformance"
+            gitHubLink: "https://github.com/argel6767/PeakPerformance",
+            webLink: null
 
         },
 
@@ -98,7 +110,8 @@ const INFO = {
                 "SWE-Bot is a single page React web application powered by OpenAI's Chat Completions API. SWE-Bot explains and teaches computer science and software engineering topics to users.",
             logos: ["https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"],
             linkText: "View Project",
-            link: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg",
+            gitHubLink: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg",
+            webLink: "https://voluble-chebakia-14add6.netlify.app/"
         },
     ],
 };
