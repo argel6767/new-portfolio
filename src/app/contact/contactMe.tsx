@@ -24,14 +24,16 @@ export const ContactMe = () => {
     const sendEmail = async (e:React.FormEvent<HTMLFormElement>) => {
         setIsLoading(true);
         e.preventDefault();
-
+        
         try {
             await emailjs.sendForm(SERVICE_ID!, TEMPLATE_ID!, form.current!, {publicKey: PUBLIC_KEY!,})
             console.log('Email sent successfully!')
         }
-        catch (error:any) {
+        catch (error) {
             setIsError(true);
             console.error(error);
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // @ts-expect-error
             setErrorMessage(error.message);
             await sleep(1700);
             setIsError(false);
