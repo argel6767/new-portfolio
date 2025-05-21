@@ -1,36 +1,120 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Personal Portfolio
 
-## Getting Started
+A modern, responsive personal portfolio website built with Next.js, TypeScript, and Tailwind CSS. This project showcases professional experience, skills, and projects in a clean, interactive interface.
 
-First, run the development server:
+This portfolio is heavily inspired by [reactfolio](https://github.com/truethari/reactfolio) by **Tharindu N. Madhusanka** (username: truethari). It uses the original project as a starting point and influence for general structure and style while utilizing Next.js, TypeScript, and Tailwind CSS instead of React, webpack, and vanilla CSS.
 
+## 🌟 Features
+
+- **Modern UI**: Clean, responsive design with smooth animations and transitions
+- **Multi-page Layout**: Home, About, Projects, and Contact pages with intuitive navigation
+- **Projects Showcase**: Interactive project cards with expandable details
+- **GitHub Integration**: Displays language statistics from GitHub profile
+- **Contact Form**: Integrated with EmailJS for direct messaging
+- **Responsive Design**: Optimized for all screen sizes and devices
+- **Animation Effects**: Subtle motion effects for enhanced user experience
+- **SEO Optimized**: Meta tags and structured data for better search engine visibility
+
+## 🛠️ Technologies
+
+- **Frontend**: Next.js, TypeScript, Tailwind CSS
+- **UI Libraries**: DaisyUI, FontAwesome
+- **Animations**: tailwindcss-motion
+- **Form Handling**: EmailJS
+- **API Integration**: GitHub Stats API
+- **Deployment**: Vercel (suggested)
+
+## 📋 Prerequisites
+
+- Node.js (>= 18.x)
+- npm or yarn
+
+## 🚀 Getting Started
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/portfolio.git
+cd portfolio
+```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Set up environment variables:
+   Create a `.env.local` file in the root directory with the following variables:
+```
+NEXT_PUBLIC_SERVICE_ID=your_emailjs_service_id
+NEXT_PUBLIC_TEMPLATE_ID=your_emailjs_template_id
+NEXT_PUBLIC_PUBLIC_KEY=your_emailjs_public_key
+```
+
+4. Run the development server:
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🧰 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+portfolio/
+├── public/           # Static assets (images, icons)
+├── src/
+│   ├── app/          # Next.js app router pages
+│   │   ├── about/    # About page components
+│   │   ├── contact/  # Contact page components
+│   │   ├── projects/ # Projects page components
+│   │   └── ...       # Global styles and layout
+│   ├── components/   # Reusable UI components
+│   └── data/         # Site content and configuration
+└── next.config.ts    # Next.js configuration
+```
 
-## Learn More
+## ✨ Customization
 
-To learn more about Next.js, take a look at the following resources:
+### Personal Information
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Edit the `src/data/user.ts` file to update your personal information, including:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Name, email, and social links
+- Homepage, about, and contact descriptions
+- Project details and links
+- Education and work history
 
-## Deploy on Vercel
+### Styling
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project uses Tailwind CSS for styling. Customize the look and feel by editing:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `src/app/globals.css` - Global styles
+- Tailwind classes within component files
+- DaisyUI theme in the tailwind.config.js file (not included in the repo structure but can be added)
+
+## 📝 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 👏 Acknowledgements
+
+- [reactfolio](https://github.com/truethari/reactfolio) by Tharindu N. Madhusanka - Original inspiration
+- [Next.js](https://nextjs.org/) - React framework
+- [Tailwind CSS](https://tailwindcss.com/) - CSS framework
+- [DaisyUI](https://daisyui.com/) - Tailwind CSS component library
+- [FontAwesome](https://fontawesome.com/) - Icons
+- [EmailJS](https://www.emailjs.com/) - Email service
+
+## 📞 Contact
+
+Feel free to reach out if you have any questions or suggestions.
+
+- Email: argel6767@gmail.com
+- GitHub: [argel6767](https://github.com/argel6767)
+- LinkedIn: [Argel Hernandez Amaya](https://linkedin.com/in/argel-hernandez-amaya)
