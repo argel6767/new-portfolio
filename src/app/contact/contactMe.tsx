@@ -7,8 +7,8 @@ import {faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import INFO from "@/data/user";
 
-const SERVICE_ID = process.env.NEXT_PRIVATE_SERVICE_ID;
-const TEMPLATE_ID = process.env.NEXT_PRIVATE_TEMPLATE_ID;
+const SERVICE_ID = process.env.NEXT_PUBLIC_SERVICE_ID;
+const TEMPLATE_ID = process.env.NEXT_PUBLIC_TEMPLATE_ID;
 const PUBLIC_KEY = process.env.NEXT_PUBLIC_PUBLIC_KEY;
 
 function sleep(ms:number) {
