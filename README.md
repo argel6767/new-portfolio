@@ -11,6 +11,7 @@ This portfolio is heavily inspired by [reactfolio](https://github.com/truethari/
 - **Projects Showcase**: Interactive project cards with expandable details
 - **GitHub Integration**: Displays language statistics from GitHub profile
 - **Contact Form**: Integrated with EmailJS for direct messaging
+- **PostHog Integration**: Grants affordable analytics via PostHog
 - **Responsive Design**: Optimized for all screen sizes and devices
 - **Animation Effects**: Subtle motion effects for enhanced user experience
 - **SEO Optimized**: Meta tags and structured data for better search engine visibility
@@ -52,6 +53,8 @@ yarn install
 NEXT_PUBLIC_SERVICE_ID=your_emailjs_service_id
 NEXT_PUBLIC_TEMPLATE_ID=your_emailjs_template_id
 NEXT_PUBLIC_PUBLIC_KEY=your_emailjs_public_key
+NEXT_PUBLIC_POSTHOG_KEY=your_posthog_key
+NEXT_PUBLIC_POSTHOG_HOST=your_posting_host
 ```
 
 4. Run the development server:
