@@ -174,7 +174,7 @@ export const ProjectDropDown = ({project}:ProjectDropDownContainerProps) => {
                 <article className="py-2">
                     <main className={"flex flex-col gap-2 py-2"}>
                         <p className={"text-gray-400 font-semibold"}>{displayText}</p>
-                        <article className={"flex justify-center items-center pt-4"}>
+                        <article className={"flex justify-center items-center pt-4 w-full"}>
                             <Microlink url={link} lazy size={'large'} media={"iframe"}/>
                         </article>
                     </main>
