@@ -120,7 +120,7 @@ export const ContactMe = () => {
 
 export const Socials = () => {
     return (
-        <main className={"flex justify-between px-4 text-xs md:text-lg"}>
+        <main className={"flex justify-between px-6 text-xs md:text-lg"}>
             <Link className={"flex gap-4 items-center hover:underline hover:underline-offset-4"} href={INFO.socials.github}><FontAwesomeIcon icon={faGithub}/>Follow Me on GitHub</Link>
             <Link className={"flex gap-4 items-center hover:underline hover:underline-offset-4"} href={INFO.socials.linkedin}><FontAwesomeIcon icon={faLinkedin}/> Follow me on LinkedIn</Link>
             <Link className={"flex gap-4 items-center hover:underline hover:underline-offset-4"} href={`mailto:${INFO.main}`}><FontAwesomeIcon icon={faEnvelope}/>Email Me</Link>

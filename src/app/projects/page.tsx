@@ -1,20 +1,22 @@
-'use client'
+import SEO from "@/data/seo";
+import type {Metadata} from "next";
 import {NavBar} from "@/components/navbar";
-import {ProjectDropDownContainer} from "@/components/project-display";
-import {Footer} from "@/components/footer";
 import INFO from "@/data/user";
-import {LanguageStats} from "@/components/github";
-import {useEffect, useState} from "react";
+import {ClientAnchorProjectDropDown} from "@/app/projects/clientProjectDropdown";
+
+const seo = SEO.projects;
+
+export const metadata: Metadata = {
+    title: seo.title,
+    description: seo.description,
+    keywords: seo.keywords,
+};
+
 
 export default function Projects() {
-    const [hasHash, setHasHash] = useState(false);
-
-    useEffect(() => {
-        setHasHash(!!window.location.hash);
-    }, []);
-
     return (
-        <div className={"flex justify-center items-center w-full motion-preset-fade transition-opacity  motion-delay-200"}>
+        <div
+            className={"flex justify-center items-center w-full motion-preset-fade transition-opacity  motion-delay-200"}>
             <main className={"pt-36 px-3 w-full lg:w-3/4 rounded-3xl shadow-2xl"}>
                 <nav className={"flex justify-center items-center w-full"}>
                     <NavBar/>
@@ -23,16 +25,8 @@ export default function Projects() {
                     <h1 className={"font-bold text-5xl"}>{INFO.project.title}</h1>
                     <p className={"text-xl text-gray-400 font-semibold text-left"}>{INFO.project.description}</p>
                 </article>
-                <div className={`${hasHash? "" : "motion-translate-y-in-100 motion-ease-spring-smooth motion-delay-300"}`}>
-                    <span className={"w-full pt-44 px-2 lg:w-3/4 rounded-3xl shadow-2xl"}>
-            <ProjectDropDownContainer/>
-            </span>
-                    <LanguageStats/>
-                    <footer>
-                        <Footer/>
-                    </footer>
-                </div>
-
+                <ClientAnchorProjectDropDown/>
             </main>
-        </div>)
+        </div>
+    )
 }

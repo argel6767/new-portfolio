@@ -6,6 +6,15 @@ import INFO from "@/data/user";
 import {JobInfoContainer, SchoolInfoContainer} from "@/app/about/history";
 import {faUniversity, faBriefcase } from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import type {Metadata} from "next";
+import SEO from "@/data/seo";
+
+const seo = SEO.about
+export const metadata: Metadata = {
+    title: seo.title,
+    description: seo.description,
+    keywords: seo.keywords,
+};
 
 export default function About() {
     return (
