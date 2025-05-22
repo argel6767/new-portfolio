@@ -113,6 +113,7 @@ This project is open source and available under the [MIT License](LICENSE).
 - [DaisyUI](https://daisyui.com/) - Tailwind CSS component library
 - [FontAwesome](https://fontawesome.com/) - Icons
 - [EmailJS](https://www.emailjs.com/) - Email service
+- [PostHog](https://posthog.com/) - Analytic Service
 
 ## 📞 Contact
 
