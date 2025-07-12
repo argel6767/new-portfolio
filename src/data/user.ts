@@ -39,18 +39,22 @@ const INFO = {
 
 
     projects: [
+
         {
-            title: "Tailor.ai",
+            title: "INeedHousing",
             description:
-                "Tailor your resume with the power of AI! Tailor.ai is a full stack web application that leverages Gemini 2.0 Flash via Spring AI to intelligently tailor a user's resume to specific job requirements, significantly improving job application success rates. The platform implements JWT authentication and email verification with JavaMailSender for secure user management. I engineered an efficient document storage architecture using AWS S3, " +
-                "enabling persistent access to user resumes across sessions while ensuring data security and scalability throughout the customization process.",
-            logos: ["https://www.vectorlogo.zone/logos/springio/springio-icon.svg",
-                "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg",
+                "INeedHousing is a comprehensive full-stack web application that addresses housing shortages for interns and new graduates relocating to their employment cities. I successfully delivered a complete MVP with frontend deployed on Vercel using Next.js and containerized backend hosted on Azure App Service. The platform leverages sophisticated ETL pipelines using Spring REST client to extract, transform, and normalize housing data from multiple third-party services, creating a unified marketplace with hundreds of listings. Implemented user registration with Azure Blob Storage for profile pictures, personalized search preferences, and a responsive listing interface with Tailwind CSS. Currently developing a Quarkus-based cron job microservice for automated Azure resource cleanup and database maintenance with real-time monitoring capabilities.",
+            logos: [
+                "https://www.vectorlogo.zone/logos/springio/springio-icon.svg",
+                "./quarkus-icon.svg",
+                "https://www.vectorlogo.zone/logos/nextjs/nextjs-icon.svg",
                 "https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg",
-                "https://www.vectorlogo.zone/logos/heroku/heroku-icon.svg"],
+                "https://www.vectorlogo.zone/logos/microsoft_azure/microsoft_azure-icon.svg"
+            ],
             linkText: "View Project",
-            gitHubLink: "https://github.com/argel6767/tailor.ai",
-            webLink:"https://tailor-ai.netlify.app/"
+            gitHubLink:"https://github.com/argel6767/i-need-housing",
+            webLink: "https://i-need-housing.vercel.app/",
+            keywords: ["Spring Boot", "Next.js", "Quarkus", "PostgreSQL", "Azure"]
         },
 
         {
@@ -65,23 +69,37 @@ const INFO = {
             ],
             linkText: "View Project",
             gitHubLink: "https://gitlab.com/LibreFoodPantry/client-solutions/bear-necessities-market",
-            webLink: null
+            webLink: null,
+            keywords: ["Vue.js", "Node.js", "MongoDB", "Docker", "Vitest", "Mocha"]
         },
 
         {
-            title: "INeedHousing",
+            title: "Tailor.ai",
             description:
-                "INeedHousing is a comprehensive full-stack web application that addresses housing shortages for interns and new graduates relocating to their employment cities. I successfully delivered a complete MVP with frontend deployed on Vercel using Next.js and containerized backend hosted on Azure App Service. " +
-                "The platform leverages sophisticated ETL pipelines using Spring REST client to extract, transform, and normalize housing data from multiple third-party services, creating a unified marketplace with hundreds of listings. Implemented user registration, personalized search preferences, and a responsive listing interface with Tailwind CSS.",
-            logos: [
-                "https://www.vectorlogo.zone/logos/springio/springio-icon.svg",
+                "Tailor your resume with the power of AI! Tailor.ai is a full stack web application that leverages Gemini 2.0 Flash via Spring AI to intelligently tailor a user's resume to specific job requirements, significantly improving job application success rates. The platform implements JWT authentication and email verification with JavaMailSender for secure user management. I engineered an efficient document storage architecture using AWS S3, " +
+                "enabling persistent access to user resumes across sessions while ensuring data security and scalability throughout the customization process.",
+            logos: ["https://www.vectorlogo.zone/logos/springio/springio-icon.svg",
+                "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg",
+                "https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg",
+                "https://www.vectorlogo.zone/logos/heroku/heroku-icon.svg"],
+            linkText: "View Project",
+            gitHubLink: "https://github.com/argel6767/tailor.ai",
+            webLink:"https://tailor-ai.netlify.app/",
+            keywords: ["Spring Boot", "React", "PostgreSQL", "Heroku", "Netlify"]
+        },
+
+        {
+            title: "ChatterBox",
+            description: "ChatterBox is a modern real-time chat application built with Next.js 15 and Spring Boot that delivers seamless messaging experiences through WebSocket connections using the STOMP protocol. The platform features comprehensive social functionality including friendship management, user search, and group chat creation, all secured with JWT authentication and email verification. I implemented a microservices architecture with a dedicated Quarkus email service for scalable asynchronous processing, while the frontend leverages shadcn/ui components and Tailwind CSS for a polished, responsive interface. ChatterBox demonstrates advanced real-time communication patterns with message editing, deletion, and live chat room updates, complemented by robust backend features including rate limiting, PostgreSQL persistence, and comprehensive API endpoints for user management and social interactions.",
+            logos: [ "https://www.vectorlogo.zone/logos/springio/springio-icon.svg",
+                "./quarkus-icon.svg",
                 "https://www.vectorlogo.zone/logos/nextjs/nextjs-icon.svg",
                 "https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg",
-                "https://www.vectorlogo.zone/logos/azurecontainerregistry/azurecontainerregistry-icon.svg"
-            ],
+                "https://www.vectorlogo.zone/logos/heroku/heroku-icon.svg"],
             linkText: "View Project",
-            gitHubLink:"https://github.com/argel6767/i-need-housing",
-            webLink: "https://i-need-housing.vercel.app/"
+            gitHubLink: "https://github.com/argel6767/chatter-box/",
+            webLink: "https://chatter-box-pink.vercel.app",
+            keywords: ["Spring Boot", "Quarkus", "Next.js", "PostgreSQL", "Heroku", "Sevalla"]
         },
 
         {
@@ -91,7 +109,8 @@ const INFO = {
             logos: ["https://cdn.jsdelivr.net/npm/programming-languages-logos/src/java/java.png"],
             linkText: "View Project",
             gitHubLink: "https://github.com/argel6767/customer-order-parser",
-            webLink: null
+            webLink: null,
+            keywords: ["Java", "JavaFX", "Apache POI", "OpenCSV"]
         },
 
         {
@@ -106,19 +125,10 @@ const INFO = {
             ],
             linkText: "View Project",
             gitHubLink: "https://github.com/argel6767/PeakPerformance",
-            webLink: null
-
+            webLink: null,
+            keywords: ["Django", "React Native", "PostgreSQL", "CI-CD", "GitHub Actions"]
         },
 
-        {
-            title: "SWE-Bot",
-            description:
-                "SWE-Bot is a responsive single page React web application powered by OpenAI's Chat Completions API. The application serves as an educational tool that explains and teaches computer science and software engineering topics to users through an intuitive chat interface. SWE-Bot demonstrates practical implementation of AI integration with web technologies, providing interactive learning experiences tailored to individual user queries.",
-            logos: ["https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"],
-            linkText: "View Project",
-            gitHubLink: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg",
-            webLink: "https://voluble-chebakia-14add6.netlify.app/"
-        },
     ],
 
     educationHistory : [
@@ -139,9 +149,12 @@ const INFO = {
         {
             employer: "Walmart",
             position: "Software Engineer II",
-            dates: "Jun. 2025 - Aug. 2025",
+            dates: "Jun. 2025 - Now",
             accomplishments: [
-                "Incoming Software Engineer II Intern @ Walmart",
+                "Member of the Sam’s Club Technology Cloud Powered Checkout (CPC) team",
+                "Conducted comprehensive API linting audits of Sam’s Club Core Member Spring Boot microservices, identified\n" +
+                "compliance gaps, and proposed and currently implementing actionable solutions to standardize REST API\n" +
+                "practices across the platform"
             ]
         },
 

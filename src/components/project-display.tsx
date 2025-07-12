@@ -14,6 +14,7 @@ interface Project {
     linkText: string;
     gitHubLink: string;
     webLink: string | null;
+    keywords: string[]
 }
 
 interface ProjectProps {
@@ -22,9 +23,17 @@ interface ProjectProps {
     children?: ReactNode
 }
 
+const KeyWordsContainer = ({keywords}: { keywords: string[] }) => {
+    return (
+        <div className={"card-actions mt-auto gap-2"}>
+            {keywords.map((keyword, i) => (
+                <div className={"badge badge-outline text-xs"} key={i}>{keyword}</div>
+            ))}
+        </div>
+    )
+}
 
-const Project = ({project, displayText, children}: ProjectProps) => {
-
+const Project = ({project, displayText}: ProjectProps) => {
 
     return (
         <>
@@ -36,10 +45,8 @@ const Project = ({project, displayText, children}: ProjectProps) => {
             <main className={"flex flex-col gap-2 py-2"}>
                 <h3 className={"text-3xl text-left border-b-1 font-semibold"}>{project.title}</h3>
                 <p className={"text-gray-400 font-semibold"}>{displayText}</p>
-                <article className={"flex justify-center items-center gap-2 py-4"}>
-                    {children}
-                </article>
             </main>
+            <KeyWordsContainer keywords={project.keywords}/>
         </>
     )
 }
@@ -55,13 +62,14 @@ const ProjectPreview = ({project}: ProjectPreviewProps) => {
 
     return (
         <div
-            className={"flex flex-col items-center justify-start rounded-lg shadow-lg p-2 hover:bg-slate-50 hover:scale-105 hover:cursor-pointer transition-transform duration-300 relative w-full"}
+            className={"flex flex-col items-center justify-start rounded-lg shadow-lg p-3 hover:bg-slate-50 hover:scale-105 hover:cursor-pointer transition-transform duration-300 relative w-full"}
             onMouseEnter={() => setHovering(true)}
             onMouseLeave={() => setHovering(false)}>
             {isHovering && <Modal>
                 <Link className={"btn btn-outline"} href={`/projects/#${project.title.replaceAll(" ", "")}`}>Read More</Link>
             </Modal>}
             <Project project={project} displayText={displayText} />
+
         </div>
     )
 }
@@ -70,7 +78,7 @@ export const ProjectPreviewContainer = () => {
     const projects = INFO.projects
 
     return (
-        <main className={"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 p-2"}>
+        <main className={"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-2"}>
             {projects.map((project, i) => (
                 <ProjectPreview key={i} project={project} />
             ))}
@@ -179,6 +187,9 @@ export const ProjectDropDown = ({project}:ProjectDropDownContainerProps) => {
                         </article>
                     </main>
                 </article>
+                <footer className={"py-2"}>
+                    <KeyWordsContainer keywords={project.keywords}/>
+                </footer>
             </div>
         </main>
     );
