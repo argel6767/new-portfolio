@@ -152,9 +152,8 @@ const INFO = {
             dates: "Jun. 2025 - Now",
             accomplishments: [
                 "Member of the Sam’s Club Technology Cloud Powered Checkout (CPC) team",
-                "Conducted comprehensive API linting audits of Sam’s Club Core Member Spring Boot microservices, identified\n" +
-                "compliance gaps, and proposed and currently implementing actionable solutions to standardize REST API\n" +
-                "practices across the platform"
+                "Conducted comprehensive API linting audits of Core Member Checkout microservices, documenting nearly 500 linting violations and identifying compliance gaps",
+                "Proposed and implemented actionable solutions to standardize REST API practices across the platform reducing violations by 75%"
             ]
         },
 
