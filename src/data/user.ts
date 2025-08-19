@@ -149,11 +149,11 @@ const INFO = {
         {
             employer: "Walmart",
             position: "Software Engineer II",
-            dates: "Jun. 2025 - Now",
+            dates: "Jun. 2025 - Aug. 2025",
             accomplishments: [
                 "Member of the Sam’s Club Technology Cloud Powered Checkout (CPC) team",
                 "Conducted comprehensive API linting audits of Core Member Checkout microservices, documenting nearly 500 linting violations and identifying compliance gaps",
-                "Proposed and implemented actionable solutions to standardize REST API practices across the platform reducing violations by 75%"
+                "Proposed and implemented actionable solutions to standardize REST API practices across the platform, reducing violations by 75%"
             ]
         },
 
