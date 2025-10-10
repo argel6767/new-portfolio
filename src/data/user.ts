@@ -15,14 +15,14 @@ const INFO = {
     homepage: {
         title: "Welcome to my Portfolio!",
         description:
-            "Hello! My name is Argel. I am student at Western New England University (graduating Fall 2025) studying computer science. I love to program and am always learning to try to hone my skills. Currently, I am learning Django and React Native."
+            "Hello! My name is Argel. I am senior at Western New England University (graduating Fall 2025) studying computer science. I love to program and am always learning to try to hone my skills. Currently, I am working on INeedHousing's admin web application."
     },
 
     about: {
         title: "A Little Bit About Me",
         description:
-            "I am currently a student at Western New England University. I am studying computer science and will graduate in Fall 2025. I am proficient in Java, Python, HTML, CSS and Javascript. I have also created projects with both frontend and backend frameworks/libraries such as Spring Boot, NextJS, Django, and React Native." +
-            " I love to workout and spend time with my friends when I am not programming."
+            "I am a senior at Western New England University. I am studying computer science and will graduate in Fall 2025. I am proficient in Java, Python, HTML, CSS and Javascript. I have also created projects with both frontend and backend frameworks/libraries such as Spring Boot, NextJS, Django, and React Native." +
+            " I love to workout, play video games, and spend time with my friends when I am not programming."
     },
 
     project: {
@@ -43,8 +43,8 @@ const INFO = {
         {
             title: "INeedHousing",
             description:
-                "INeedHousing is a full-stack housing aggregation platform built with microservices architecture to help interns and new graduates find housing near their workplace. The application processes 1000+ listings from Zillow, RentCast, and Airbnb through automated ETL pipelines and delivers them via a modern Next.js frontend deployed on Vercel with a containerized Spring Boot backend on Azure App Service." +
-                "The system features an event-driven architecture with webhook endpoints triggering real-time data processing, a Quarkus-based cron job service for automated maintenance tasks, and live operational monitoring through WebSocket-powered admin dashboards. Technical implementation includes JWT authentication, Azure Blob Storage integration for file management, PostgreSQL with PostGIS for geospatial data, and a CI/CD pipeline using GitHub Actions for automated multi-service deployments with smart change detection." +
+                "INeedHousing is a full-stack housing aggregation platform built with microservices architecture to help interns and new graduates find housing near their workplace. The application processes 1000+ listings from Zillow, RentCast, and Airbnb through automated ETL pipelines and delivers them via a modern Next.js frontend deployed on Vercel with a containerized Spring Boot backend on Azure App Service. " +
+                "The system features an event-driven architecture with webhook endpoints triggering real-time data processing, a Quarkus-based cron job service for automated maintenance tasks, and live operational monitoring through WebSocket-powered admin dashboards. Technical implementation includes JWT authentication, Azure Blob Storage integration for file management, PostgreSQL with PostGIS for geospatial data, and a CI/CD pipeline using GitHub Actions for automated multi-service deployments with smart change detection. " +
                 "Key features include user registration with email verification, location-based property search with interactive maps, customizable housing preferences, and comprehensive admin tools for system monitoring and maintenance.",
             logos: [
                 "https://www.vectorlogo.zone/logos/springio/springio-icon.svg",
@@ -56,7 +56,7 @@ const INFO = {
             linkText: "View Project",
             gitHubLink:"https://github.com/argel6767/i-need-housing",
             webLink: "https://i-need-housing.vercel.app/",
-            keywords: ["Spring Boot", "Next.js", "Quarkus", "PostgreSQL", "Azure"]
+            keywords: ["Spring Boot", "Next.js", "Quarkus", "PostgreSQL", "Azure", "CI/CD", "Microservices"]
         },
 
         {
@@ -149,7 +149,7 @@ const INFO = {
 
     workHistory: [
         {
-            employer: "Walmart",
+            employer: "Walmart Global Tech",
             position: "Software Engineer II",
             dates: "Jun. 2025 - Aug. 2025",
             accomplishments: [
