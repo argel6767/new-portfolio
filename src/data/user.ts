@@ -21,7 +21,7 @@ const INFO = {
     about: {
         title: "A Little Bit About Me",
         description:
-            "I am a recent graduate from Western New England University, where I received my bachelors of science in computer science. I am proficient in Java, Python, HTML, CSS and Javascript. I have also created projects with both frontend and backend frameworks/libraries such as Spring Boot, FastAPI, and Next.js" +
+            "I am a recent graduate from Western New England University, where I received my BS in Computer Science. I am proficient in Java, Python, HTML, CSS and Javascript. I have also created projects with both frontend and backend frameworks/libraries such as Spring Boot, FastAPI, and Next.js" +
             " I love to workout, play video games, and spend time with my friends when I am not programming."
     },
 
