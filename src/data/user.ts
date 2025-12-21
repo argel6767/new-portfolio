@@ -58,6 +58,26 @@ const INFO = {
             webLink: "https://i-need-housing.vercel.app/",
             keywords: ["Spring Boot", "Next.js", "Quarkus", "PostgreSQL", "Azure", "CI/CD", "Microservices"]
         },
+        
+        {
+            title: "Sim-Feed",
+            description:
+                "Sim-Feed is a satirical social media simulation platform where autonomous AI agents—representing exaggerated political caricatures across the ideological spectrum—generate posts, comments, and interactions to create an evolving commentary on modern political discourse. The system features a distributed architecture with a React 19/React Router 7 frontend deployed on Vercel, serverless AWS Lambda API functions running within a VPC for secure database access, and a FastAPI scheduler engine hosted on EC2 that orchestrates agent behavior via APScheduler. " +
+                "Each AI persona leverages the DeepSeek API with structured JSON function calling to autonomously decide actions such as creating posts, commenting, liking, following other users, or updating their bios based on their unique political ideology and recent feed activity. The backend implements JWT authentication for admin access, AWS SSM Parameter Store for secrets management, and PostgreSQL on RDS for persistent storage of personas, posts, comments, and social relationships. " +
+                "The event-driven agent framework runs 24/7 at configurable intervals, creating an organically evolving social media feed where agents interact with each other's content, fostering a living satirical ecosystem without human intervention.",
+            logos: [
+                "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg",
+                "https://raw.githubusercontent.com/devicons/devicon/master/icons/fastapi/fastapi-original.svg",
+                "https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg",
+                "https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg",
+                "https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg"
+            ],
+            linkText: "View Project",
+            gitHubLink: "https://github.com/argel6767/sim-feed",
+            webLink: "https://your-sim-feed-url.vercel.app/",
+            keywords: ["React", "FastAPI", "Node.js", "TypeScript", "Python", "AWS", "PostgreSQL", "Vercel", "Docker"]
+        },
+
 
         {
             title: "Bear Necessities Market",
@@ -91,20 +111,6 @@ const INFO = {
         },
 
         {
-            title: "ChatterBox",
-            description: "ChatterBox is a modern real-time chat application built with Next.js 15 and Spring Boot that delivers seamless messaging experiences through WebSocket connections using the STOMP protocol. The platform features comprehensive social functionality including friendship management, user search, and group chat creation, all secured with JWT authentication and email verification. I implemented a microservices architecture with a dedicated Quarkus email service for scalable asynchronous processing, while the frontend leverages shadcn/ui components and Tailwind CSS for a polished, responsive interface. ChatterBox demonstrates advanced real-time communication patterns with message editing, deletion, and live chat room updates, complemented by robust backend features including rate limiting, PostgreSQL persistence, and comprehensive API endpoints for user management and social interactions.",
-            logos: [ "https://www.vectorlogo.zone/logos/springio/springio-icon.svg",
-                "./quarkus-icon.svg",
-                "https://www.vectorlogo.zone/logos/nextjs/nextjs-icon.svg",
-                "https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg",
-                "https://www.vectorlogo.zone/logos/heroku/heroku-icon.svg"],
-            linkText: "View Project",
-            gitHubLink: "https://github.com/argel6767/chatter-box/",
-            webLink: "https://chatter-box-pink.vercel.app",
-            keywords: ["Spring Boot", "Quarkus", "Next.js", "PostgreSQL", "Heroku", "Sevalla"]
-        },
-
-        {
             title: "Customer Order Parser",
             description:
                 "Customer Order Parser is a desktop application built for Blue Tactical to streamline their order processing workflow. COP leverages custom designed data pipelines and Apache POI to clean, transform, and format raw product data into structured and easily readable Excel sheets. The application features a user-friendly interface built with JavaFX, allowing non-technical staff to efficiently process large volumes of customer orders with minimal training.",
@@ -116,19 +122,17 @@ const INFO = {
         },
 
         {
-            title: "PeakPerformance",
-            description:
-                "PeakPerformance is a mobile fitness application built with React Native and Django that enables users to track workouts, set goals, and engage in friendly competition. The app features personalized analytics and a 'Strongest of the Week' leaderboard to foster community engagement and motivation. " +
-                "During development, I'm actively adhering to professional development practices including conventional commits, CI/CD with GitHub Actions, and PR-based code reviews to ensure high code quality and maintainability. PeakPerformance is currently under active development.",
-            logos: [
-                "https://www.vectorlogo.zone/logos/djangoproject/djangoproject-icon.svg",
-                "https://cdn.worldvectorlogo.com/logos/react-native-1.svg",
-                "https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg"
-            ],
+            title: "ChatterBox",
+            description: "ChatterBox is a modern real-time chat application built with Next.js 15 and Spring Boot that delivers seamless messaging experiences through WebSocket connections using the STOMP protocol. The platform features comprehensive social functionality including friendship management, user search, and group chat creation, all secured with JWT authentication and email verification. I implemented a microservices architecture with a dedicated Quarkus email service for scalable asynchronous processing, while the frontend leverages shadcn/ui components and Tailwind CSS for a polished, responsive interface. ChatterBox demonstrates advanced real-time communication patterns with message editing, deletion, and live chat room updates, complemented by robust backend features including rate limiting, PostgreSQL persistence, and comprehensive API endpoints for user management and social interactions.",
+            logos: [ "https://www.vectorlogo.zone/logos/springio/springio-icon.svg",
+                "./quarkus-icon.svg",
+                "https://www.vectorlogo.zone/logos/nextjs/nextjs-icon.svg",
+                "https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg",
+                "https://www.vectorlogo.zone/logos/heroku/heroku-icon.svg"],
             linkText: "View Project",
-            gitHubLink: "https://github.com/argel6767/PeakPerformance",
-            webLink: null,
-            keywords: ["Django", "React Native", "PostgreSQL", "CI-CD", "GitHub Actions"]
+            gitHubLink: "https://github.com/argel6767/chatter-box/",
+            webLink: "https://chatter-box-pink.vercel.app",
+            keywords: ["Spring Boot", "Quarkus", "Next.js", "PostgreSQL", "Heroku", "Sevalla"]
         },
 
     ],
