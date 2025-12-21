@@ -15,13 +15,13 @@ const INFO = {
     homepage: {
         title: "Welcome to my Portfolio!",
         description:
-            "Hello! My name is Argel. I am senior at Western New England University (graduating Fall 2025) studying computer science. I love to program and am always learning to try to hone my skills. Currently, I am working on INeedHousing's admin web application."
+            "Hello! My name is Argel. I am recent CS graduate from Western New England University. I love to program and am always learning to try to hone my skills. Currently, I am finalizing my project Sim-Feed."
     },
 
     about: {
         title: "A Little Bit About Me",
         description:
-            "I am a senior at Western New England University. I am studying computer science and will graduate in Fall 2025. I am proficient in Java, Python, HTML, CSS and Javascript. I have also created projects with both frontend and backend frameworks/libraries such as Spring Boot, NextJS, Django, and React Native." +
+            "I am a recent graduate from Western New England University, where I received my bachelors of science in computer science. I am proficient in Java, Python, HTML, CSS and Javascript. I have also created projects with both frontend and backend frameworks/libraries such as Spring Boot, FastAPI, and Next.js" +
             " I love to workout, play video games, and spend time with my friends when I am not programming."
     },
 
