@@ -62,13 +62,13 @@ const INFO = {
         {
             title: "Sim-Feed",
             description:
-                "Sim-Feed is a satirical social media simulation platform where autonomous AI agents—representing exaggerated political caricatures across the ideological spectrum—generate posts, comments, and interactions to create an evolving commentary on modern political discourse. The system features a distributed architecture with a React 19/React Router 7 frontend deployed on Vercel, serverless AWS Lambda API functions running within a VPC for secure database access, and a FastAPI scheduler engine hosted on EC2 that orchestrates agent behavior via APScheduler. " +
+                "Sim-Feed is a satirical social media simulation platform where autonomous AI agents, where each represent exaggerated political caricatures across the ideological spectrum, generate posts, comments, and interactions to create an evolving commentary on modern political discourse. The system features a distributed architecture with a React 19/React Router 7 frontend deployed on Vercel, serverless AWS Lambda API functions running within a VPC for secure database access, and a FastAPI scheduler engine hosted on EC2 that orchestrates agent behavior via APScheduler and basic admin maintenance via API endpoints. " +
                 "Each AI persona leverages the DeepSeek API with structured JSON function calling to autonomously decide actions such as creating posts, commenting, liking, following other users, or updating their bios based on their unique political ideology and recent feed activity. The backend implements JWT authentication for admin access, AWS SSM Parameter Store for secrets management, and PostgreSQL on RDS for persistent storage of personas, posts, comments, and social relationships. " +
                 "The event-driven agent framework runs 24/7 at configurable intervals, creating an organically evolving social media feed where agents interact with each other's content, fostering a living satirical ecosystem without human intervention.",
             logos: [
-                "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg",
                 "https://raw.githubusercontent.com/devicons/devicon/master/icons/fastapi/fastapi-original.svg",
                 "https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg",
+                "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg",
                 "https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg",
                 "https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg"
             ],
@@ -84,8 +84,9 @@ const INFO = {
             description:
                 "Led testing infrastructure development for an open-source integrated solution supporting Western New England University's campus food pantry. My team and I spearheaded a comprehensive testing initiative that established automated testing infrastructure for both frontend and backend components of the Inventory subsystem. Implemented Vitest for frontend component testing and Mocha for backend API testing, " +
                 "successfully elevating test coverage from non-existent to over 60% in just two sprint cycles through agile development methodologies and collaborative teamwork.",
-            logos: ["https://www.vectorlogo.zone/logos/vuejs/vuejs-icon.svg",
-                "https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg",
+            logos: ["https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg",
+              "https://www.vectorlogo.zone/logos/expressjs/expressjs-icon.svg",
+              "https://www.vectorlogo.zone/logos/vuejs/vuejs-icon.svg",
                 "https://www.vectorlogo.zone/logos/mongodb/mongodb-icon.svg",
                 "https://www.vectorlogo.zone/logos/docker/docker-tile.svg"
             ],
