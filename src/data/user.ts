@@ -74,7 +74,7 @@ const INFO = {
             ],
             linkText: "View Project",
             gitHubLink: "https://github.com/argel6767/sim-feed",
-            webLink: "https://your-sim-feed-url.vercel.app/",
+            webLink: "https://sim-feed.vercel.app/",
             keywords: ["React", "FastAPI", "Node.js", "TypeScript", "Python", "AWS", "PostgreSQL", "Vercel", "Docker"]
         },
 
