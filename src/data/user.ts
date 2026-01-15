@@ -158,9 +158,10 @@ const INFO = {
             position: "Software Engineer II",
             dates: "Jun. 2025 - Aug. 2025",
             accomplishments: [
-                "Member of the Sam’s Club Technology Cloud Powered Checkout (CPC) team",
-                "Conducted comprehensive API linting audits of Core Member Checkout microservices, documenting nearly 500 linting violations and identifying compliance gaps",
-                "Proposed and implemented actionable solutions to standardize REST API practices across the platform, reducing violations by 75%"
+              "Member of the Sam’s Club Technology Cloud Powered Checkout (CPC) team",
+              "Conducted comprehensive API linting audits of the Member Checkout microservices, documenting nearly 500 linting violations and identifying compliance gaps",
+              "Proposed and implemented actionable solutions to standardize REST API practices across the platform, reducing violations by 75%",
+              "Enabled automated API linting in CI/CD pipeline using Swagger JSDoc, increasing linting coverage for the Member Checkout services"
             ]
         },
 
