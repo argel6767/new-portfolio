@@ -62,38 +62,39 @@ const INFO = {
         {
             title: "Sim-Feed",
             description:
-                "Sim-Feed is a satirical social media simulation platform where autonomous AI agents, each representing exaggerated political caricatures across the ideological spectrum, generate posts, comments, and interactions to create an evolving commentary on modern political discourse. The system features a distributed architecture with a React 19/React Router 7 frontend deployed on Vercel, serverless AWS Lambda API functions running within a VPC for secure database access, and a FastAPI scheduler engine hosted on EC2 that orchestrates agent behavior via APScheduler and basic admin maintenance via API endpoints. " +
-                "Each AI persona leverages the DeepSeek API with structured JSON function calling to autonomously decide actions such as creating posts, commenting, liking, following other users, or updating their bios based on their unique political ideology and recent feed activity. The backend implements JWT authentication for admin access, AWS SSM Parameter Store for secrets management, and PostgreSQL on RDS for persistent storage of personas, posts, comments, and social relationships. " +
-                "The event-driven agent framework runs 24/7 at configurable intervals, creating an organically evolving social media feed where agents interact with each other's content, fostering a living satirical ecosystem without human intervention.",
+                "Sim-Feed is a satirical social media platform where 15 autonomous AI agents, each embodying an exaggerated political caricature, generate posts, comments, likes, and follows in a live 24/7 simulation. Real users can join and interact alongside the agents via Clerk authentication, making the feed an ever-evolving ecosystem of political commentary without human intervention. " +
+                "Each persona leverages the DeepSeek API with structured JSON function calling to autonomously decide actions based on their unique ideology and recent feed activity. " +
+                "The platform runs on a multi-service backend spanning a React 19/React Router 7 frontend on Vercel, serverless Lambda functions within a VPC, a FastAPI scheduler engine on EC2 via APScheduler, and a Spring Boot user service on EC2, with PostgreSQL for persistent storage of personas, posts, comments, and social relationships.",
             logos: [
                 "https://raw.githubusercontent.com/devicons/devicon/master/icons/fastapi/fastapi-original.svg",
                 "https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg",
-                "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg",
+                "https://www.vectorlogo.zone/logos/springio/springio-icon.svg",
+                "https://www.vectorlogo.zone/logos/reactrouter/reactrouter-icon.svg",
                 "https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg",
                 "https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg"
             ],
             linkText: "View Project",
             gitHubLink: "https://github.com/argel6767/sim-feed",
-            webLink: "https://sim-feed.vercel.app/",
-            keywords: ["React", "FastAPI", "Node.js", "TypeScript", "Python", "AWS", "PostgreSQL", "Vercel", "Docker"]
+            webLink: "https://sim-feed.com/",
+            keywords: ["React", "FastAPI", "Spring Boot", "Node.js", "TypeScript", "AWS", "PostgreSQL", "Vercel", "Docker"]
         },
-
-
         {
             title: "Bear Necessities Market",
             description:
-                "Led testing infrastructure development for an open-source integrated solution supporting Western New England University's campus food pantry. My team and I spearheaded a comprehensive testing initiative that established automated testing infrastructure for both frontend and backend components of the Inventory subsystem. Implemented Vitest for frontend component testing and Mocha for backend API testing, " +
-                "successfully elevating test coverage from non-existent to over 60% in just two sprint cycles through agile development methodologies and collaborative teamwork.",
-            logos: ["https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg",
-              "https://www.vectorlogo.zone/logos/expressjs/expressjs-icon.svg",
-              "https://www.vectorlogo.zone/logos/vuejs/vuejs-icon.svg",
+                "Bear Necessities Market is an open-source integrated platform supporting Western New England University's campus food pantry, built to streamline inventory management and distribution for students in need. " +
+                "As part of a 5-person Scrum team, I led the testing initiative for the InventorySystem Service, defining and presenting the test philosophy and infrastructure that brought coverage from zero to over 60% in just two sprint cycles. " +
+                "The project leveraged Vitest for frontend component testing and Mocha for backend API testing, with all work managed through GitLab CI/CD pipelines, issues, and sprint planning ceremonies following Agile methodologies.",
+            logos: [
+                "https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg",
+                "https://www.vectorlogo.zone/logos/expressjs/expressjs-icon.svg",
+                "https://www.vectorlogo.zone/logos/vuejs/vuejs-icon.svg",
                 "https://www.vectorlogo.zone/logos/mongodb/mongodb-icon.svg",
                 "https://www.vectorlogo.zone/logos/docker/docker-tile.svg"
             ],
             linkText: "View Project",
             gitHubLink: "https://gitlab.com/LibreFoodPantry/client-solutions/bear-necessities-market",
             webLink: null,
-            keywords: ["Vue.js", "Node.js", "MongoDB", "Docker", "Vitest", "Mocha"]
+            keywords: ["Vue.js", "Node.js", "MongoDB", "Docker", "Vitest", "Mocha", "GitLab CI/CD", "Scrum"]
         },
 
         {
