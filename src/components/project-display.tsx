@@ -90,7 +90,6 @@ interface ProjectDropDownContainerProps {
     project: Project;
 }
 
-// In your ProjectDropDown component
 export const ProjectDropDown = ({project}:ProjectDropDownContainerProps) => {
     const [isOpen, setIsOpen] = useState(false);
     const dropdownRef = useRef(null);
@@ -99,12 +98,11 @@ export const ProjectDropDown = ({project}:ProjectDropDownContainerProps) => {
     const [hasMounted, setHasMounted] = useState(false);
     const link = project.webLink? project.webLink : project.gitHubLink;
 
-    // Add this effect to track when component has mounted
+   
     useEffect(() => {
         setHasMounted(true);
     }, []);
 
-    // Check URL hash only after component has mounted on client
     useEffect(() => {
         if (!hasMounted) return;
 
@@ -112,11 +110,8 @@ export const ProjectDropDown = ({project}:ProjectDropDownContainerProps) => {
             if (window.location.hash === `#${anchor}`) {
                 setIsOpen(true);
 
-                // Use history.replaceState instead of window.location.hash = ""
-                // This prevents page jumps when clearing the hash
                 history.replaceState(null, document.title, window.location.pathname + window.location.search);
 
-                // Scroll to the dropdown after a small delay to ensure it's rendered
                 setTimeout(() => {
                     if (dropdownRef.current) {
                         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -126,17 +121,14 @@ export const ProjectDropDown = ({project}:ProjectDropDownContainerProps) => {
                         // @ts-expect-error
                         dropdownRef.current.focus();
                     }
-                }, 250); // Slightly longer timeout to ensure animations have started
+                }, 250); 
             }
         };
 
-        // Check on initial load
         checkHash();
 
-        // Add listener for hash changes
         window.addEventListener("hashchange", checkHash);
 
-        // Cleanup
         return () => window.removeEventListener("hashchange", checkHash);
     }, [anchor, hasMounted]);
 
@@ -163,7 +155,7 @@ export const ProjectDropDown = ({project}:ProjectDropDownContainerProps) => {
                     <div className={"flex flex-col items-center w-full gap-3"}>
                         <header className={"flex justify-start items-center gap-2"}>
                             {project.logos.map((logo, i) => (
-                                <img key={i} src={logo} alt={"Tool image"} width={50}/>
+                                <img key={i} src={logo} alt={"Tool image"} width={45}/>
                             ))}
                         </header>
                         <span className={"text-2xl md:text-3xl font-semibold"}>{project.title}</span>
