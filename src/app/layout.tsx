@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import {Heebo, Roboto} from "next/font/google";
 import "./globals.css";
 import {GlobalProvider} from "@/components/global-context";
-import {PostHogProvider} from "@/components/posthogProvider";
+import { PostHogProvider } from "@/components/posthogProvider";
+import { Analytics } from "@vercel/analytics/next"
 import SEO from "@/data/seo";
 
 const heebo = Heebo({
@@ -32,6 +33,7 @@ export default function RootLayout({
     <html lang="en" className={"bg-white text-black"}>
       <body className={`${heebo.variable} ${roboto.variable} antialiased`}>
       <PostHogProvider>
+      <Analytics/>  
       <GlobalProvider>
         {children}
       </GlobalProvider>

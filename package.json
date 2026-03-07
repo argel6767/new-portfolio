@@ -16,6 +16,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@microlink/react": "^5.5.23",
+    "@vercel/analytics": "^1.6.1",
     "next": "15.5.9",
     "posthog-js": "^1.245.1",
     "react": "^19.0.0",
